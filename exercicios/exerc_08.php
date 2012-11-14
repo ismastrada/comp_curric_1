@@ -32,7 +32,7 @@
 		echo "F <br />";
 		$var1 = (string) $var2;
 		echo "var1 = $var1, var2= $var2";
-		
+		echo "teste";
 	?>
 	
 </body>
