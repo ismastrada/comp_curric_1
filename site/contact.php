@@ -83,6 +83,9 @@
           		<fieldset>
           			<legend>Formulário de Contato</legend>
           			
+          			
+          			<input type="hidden" name="pagina" value="contato">
+          			
           			<label for="idNome">Nome: </label><br />
           			<input type="text" name="nome" id="idNome"/>
           			
