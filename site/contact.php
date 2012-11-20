@@ -55,18 +55,7 @@
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-            </ul>
+              </ul>
           </div><!--/.well -->
         </div><!--/span-->
         
@@ -85,6 +74,9 @@
           			
           			
           			<input type="hidden" name="pagina" value="contato">
+
+          			<label for="id">ID: </label><br />
+          			<input type="text" name="id" id="id"/>
           			
           			<label for="idNome">Nome: </label><br />
           			<input type="text" name="nome" id="idNome"/>
