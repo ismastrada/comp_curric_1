@@ -15,11 +15,15 @@
           			<input type="hidden" name="pagina" value="contato">
           			
           			<label for="idNome">Nome: </label>
-          			<input type="text" name="nome" id="idNome"/> 
+          			<input type="text" name="nome" id="idNome" required="true"/> 
+          			<br />
+          			
+          			<label for="idEmail">Email: </label>
+          			<input type="email" name="email" id="idEmail" required="true"/> 
           			<br />
           			
           			<label for="idSenha">Senha: </label>
-          			<input type="password" name="senha" id="idSenha"/>
+          			<input type="password" name="senha" id="idSenha" required="true"/>
           			<br />
           			
       				<label for="idMensagem">Mensagem: </label><br />
@@ -27,11 +31,11 @@
           			<br />
           			<p>Sexo: </p>
           			<label for="idRadio">Masculino </label>
-          			<input type="radio" name="radio" value="Masculino" id ="idRadio"/>
+          			<input type="radio" name="radio" value="Masculino" id ="idRadio" required="true"/>
           			<br />
           			
           			<label for="idRadio">Feminino</label>
-          			<input type="radio" name="radio" value="Feminino" id="idRadio"/>
+          			<input type="radio" name="radio" value="Feminino" id="idRadio" required=""/>
           			<br />
           			
           			<label for="idCheckBox">Desejo receber promoções e informativos. </label>
@@ -43,6 +47,9 @@
           			
           		</fieldset>
           </form>
+          
+          
+          
           
 </body>
 </html>

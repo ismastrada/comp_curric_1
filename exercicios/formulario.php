@@ -1,4 +1,12 @@
-<?php
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercicio 10</title>
+</head>
+<body>
+	<h3>Exercicio 10</h3>
+	<?php
 	
 	// $_POST = variavel global
 	
@@ -7,23 +15,32 @@
 
 	// SE for enviado um post e a variável não é vazia
 	// então mostrar os dados
+	
+  	
 	if (isset($_POST) && !empty($_POST) && $_POST["pagina"] == "contato"){
-		echo $_POST["nome"]."<br />";
-		echo $_POST["senha"]."<br />";
-		echo $_POST["mensagem"];
+		$nome = strip_tags($_POST["nome"]);		
+		$senha = strip_tags($_POST["senha"]);
+		$senhaCrip = md5($senha);	
+		$mensagem = strip_tags($_POST["mensagem"]);
+		
+			
+		echo "nome: $nome <br />";
+		echo "senha: $senha <br />";
+		echo "senha criptografada: $senhaCrip <br />";
+		echo "mensagem: $mensagem <br />";
 		switch ($_POST["radio"]) {
 			case "Masculino" :
-				echo "Masculino";
+				echo "Sexo Masculino";
 				break;
 			case "Feminino" :
-				echo "Feminino";
+				echo "Sexo Feminino";
 				break;
 			default :
-				echo "nenhum sexo escolhido";
+				echo "Nenhum sexo escolhido";
 				break;
 		}
-   		if(isset($_POST["promocoes"])) {
-   			echo "quer receber promoções e informativos";	
+		if(isset($_POST["promocoes"])) {
+			echo "<br />Deseja receber promoções e informativos";	
 		}
 	}
 	// senão
@@ -33,3 +50,7 @@
 		header("Location: contact.php");
 	}
 	
+?>
+
+</body>
+</html>
