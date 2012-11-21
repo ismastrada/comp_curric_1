@@ -75,14 +75,11 @@
           			
           			<input type="hidden" name="pagina" value="contato">
 
-          			<label for="id">ID: </label><br />
-          			<input type="text" name="id" id="id"/>
-          			
           			<label for="idNome">Nome: </label><br />
-          			<input type="text" name="nome" id="idNome"/>
+          			<input type="text" name="nome" id="idNome" required="true"/>
           			
           			<label for="idEmail">E-mail: </label><br />
-          			<input type="email" name="email" id="idEmail"/>
+          			<input type="email" name="email" id="idEmail" required="true"/>
           			
           			<label for="idMensagem">Mensagem: </label><br />
           			<textarea name="mensagem" id="idMensagem" rows="3"></textarea>
