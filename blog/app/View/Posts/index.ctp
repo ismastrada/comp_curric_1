@@ -35,9 +35,15 @@
 					<td><?php echo $post["Post"]["modified"]; ?></td>
 					<td>
 						<!--<a href="/posts/view/id">Visualisar</a>-->
-						<?php echo $this->Html->link("Visualizar", array('controller' => 'posts', 'action' => 'view', $post["Post"]["id"])); ?>
-						<?php echo $this->Html->link("Editar", array('controller' => 'posts', 'action' => 'edit', $post["Post"]["id"])); ?>
-						<?php echo $this->Html->link("Excluir", array('controller' => 'posts', 'action' => 'delete', $post["Post"]["id"])); ?>
+						<?php echo $this->Html->link("Visualizar", array('controller' => 'posts', 'action' => 'view', $post["Post"]["id"]), array('class' => 'btn')); ?>
+						<?php echo $this->Html->link("Editar", array('controller' => 'posts', 'action' => 'edit', $post["Post"]["id"]), array('class' => 'btn btn-info')); ?>
+						<?php echo $this->Form->postLink(
+				            'Excluir',
+				            array('action' => 'delete', $post['Post']['id']), 
+				            array('confirm' => 'Are you sure?')
+							);
+				        ?>
+						<!--<?php echo $this->Html->link("Excluir", array('controller' => 'posts', 'action' => 'delete', $post["Post"]["id"])); ?>-->
 					</td>
 				</tr>
 			<?php endforeach; ?>
