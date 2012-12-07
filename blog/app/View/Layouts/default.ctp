@@ -52,6 +52,9 @@
                       <li class="<?php echo $this->action == 'register' ? 'active' : ''; ?>">
                         <?php echo $this->Html->link(__('Register'),array('controller' => 'users','action' => 'register')) ?>
                       </li>
+                      <li class="<?php echo $this->action == 'post' ? 'active' : ''; ?>">
+                        <?php echo $this->Html->link(__('Posts'),array('controller' => 'posts','action' => 'index')) ?>
+                      </li>
 
 
                     </ul>

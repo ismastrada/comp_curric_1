@@ -43,8 +43,6 @@
 					# redirecionar para o index
 					$this->redirect(array('action' => 'index'));
 				}
-
-
 			}
 		}
 

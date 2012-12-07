@@ -40,7 +40,7 @@
 						<?php echo $this->Form->postLink(
 				            'Excluir',
 				            array('action' => 'delete', $post['Post']['id']), 
-				            array('confirm' => 'Are you sure?')
+				            array('class'=>'btn btn-danger btn-small')				            
 							);
 				        ?>
 						<!--<?php echo $this->Html->link("Excluir", array('controller' => 'posts', 'action' => 'delete', $post["Post"]["id"])); ?>-->
