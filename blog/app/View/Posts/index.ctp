@@ -14,11 +14,11 @@
 <table class="table table-hover">
 	<thread>
 		<tr>
-			<th>Código</th>
-			<th>Título</th>
-			<th>Texto</th>
-			<th>Criado em</th>
-			<th>Atualizado em</th>
+			<th>Id</th>
+			<th>Titulo</th>
+			<th>Conteudo</th>
+			<th>Created</th>
+			<th>Modified</th>
 			<th colspan="3">Ações</th>
 		</tr>
 	</thread>
@@ -49,3 +49,20 @@
 			<?php endforeach; ?>
 	</body>
 </table>
+ 
+<?php
+$title = '<< Anterior'; 
+$options = array( ); 
+$disabledTitle = NULL; 
+$disabledOptions = array( );
+
+
+echo $this->Paginator->prev($title, $options, $disabledTitle, $disabledOptions);
+
+$title = ' Próximo >>'; 
+$options = array( ); 
+$disabledTitle = NULL; 
+$disabledOptions = array( );
+
+echo $this->Paginator->next($title, $options, $disabledTitle, $disabledOptions);
+?>

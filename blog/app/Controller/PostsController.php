@@ -4,13 +4,25 @@
 		public $helpers = array("Html", "Form");
 		public $components = array("Session");
 	
+		var $paginate = array('limit' => 5, 'order' => array('Post.title' => 'asc'));
+
 		// action
 		// /posts/index
 		public function index(){
-			$todasAsPostagens = $this->Post->find('all');
+
+			$options = array(
+	            'fields' => array('Post.id', 'Post.title', 'Post.body', 'Post.created', 'Post.modified'),
+	             
+	            'order' => array('Post.created' => 'DESC'),
+	            'limit' => 5
+        	);
+ 
+        $this->paginate = $options;
+ 
+        $todasAsPostagens = $this->paginate('Post');
 			
-			// jogar pra VIEW
-			$this->set('posts', $todasAsPostagens);
+		// jogar pra VIEW
+		$this->set('posts', $todasAsPostagens);
 		}
 
 		// /posts/view/3
@@ -43,6 +55,8 @@
 					# redirecionar para o index
 					$this->redirect(array('action' => 'index'));
 				}
+
+
 			}
 		}
 
